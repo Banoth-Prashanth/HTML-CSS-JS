@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Login&SigninPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="">
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <span> Use your Details for the registration</span>
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+                <input type="password" placeholder="password">
+                <button>Sign up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <span> use your email and password for Login</span>
+                
+                <input type="email" placeholder="email">
+                <input type="password" placeholder="password">
+                <a href="">forget password</a>
+                <button>Log in</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>wellcome.</h1>
+                    <p>Already you have an account? Please Login</p>
+                    <button class="hidden" id="login">Log in</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello Friend.&#128075;</h1>
+                    <p>You don't Have account.? / Create account</p>
+                    <button class="hidden" id="Reg">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script>
+        const container=document.getElementById('container');
+        const RegBtn=document.getElementById('Reg');
+        const LogBtn=document.getElementById('login');
+        RegBtn.addEventListener('click',() =>{
+            container.classList.add("active");
+
+        });
+        LogBtn.addEventListener('click',() =>{
+            container.classList.remove("active")
+        });
+    </script>
+
+    
+</body>
+</html>
