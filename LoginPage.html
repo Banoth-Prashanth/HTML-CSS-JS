@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" integrity="sha512-Hp+WwK4QdKZk9/W0ViDvLunYjFrGJmNDt6sCflZNkjgvNq9mY+0tMbd6tWMiAlcf1OQyqL4gn2rYp7UsfssZPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           box-sizing: border-box;
+        }
+        
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(to bottom,rgb(42, 42, 98),rgb(28, 31, 114));
+        }
+
+       .left{
+            height:180px;
+            width: 180px;
+            border-radius: 50%;
+            background-color: rgb(183, 164, 164);
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 5px rgb(183, 164, 164);
+            transform: translate(30px,-130px);
+           
+
+        }
+        .loginpage{
+            width: 400px;
+            height: 450px;
+            background: rgb(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            z-index: 111;
+            justify-content: center;
+            align-items: center;
+         
+            text-align: center;
+            padding: 10px;
+        }
+        .right{
+            height:120px;
+            width: 120px;
+            border-radius: 50%;
+            background-color: rgb(205, 109, 109);
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 5px rgb(205, 109, 109);
+            transform: translate(-40px,200px);
+        }
+        #username,#password{
+            height: 43px;
+            width: 280px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid rgb(153, 149, 142);
+            background: transparent;
+            padding-left: 10px;
+            font-size: 15px;
+            color: aliceblue;
+        }
+        a,span{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        #login-btn{
+            height: 38px;
+            width: 150px;
+            border-radius: 10px;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            border: none;
+            outline: none;
+
+        }
+        h1{
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            color: aliceblue;
+        }
+        hr{
+            width: 300px;
+            margin: 0 auto;
+        }
+        .icons{
+            font-size: 30px;
+            padding: 10px 30px;
+            color: white;
+
+        }
+       
+    </style>
+
+</head>
+<body>
+    <div class="main">
+    <div class="left"></div>
+    <div class="loginpage">
+        <br>
+        <h1>LogIn</h1>
+        <br><br>
+        <form>
+        <input type="text" placeholder="Username" id="username"><br><br>
+        <input type="password" placeholder="Password" id="password"><br><br>
+        <a href="#" id="forget">Forget password</a> <span>/</span>
+        <a href="#" id="signup">Sign Up</a><br><br>
+        <input type="submit" value="Login" id="login-btn"><br><br><br>
+    </form>
+        <hr>
+        <br>
+        <div class="icons">
+            <i class="fa-brands fa-telegram"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa-brands fa-github"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa-brands fa-linkedin"></i>
+
+        </div>
+       
+
+    </div>
+    <div class="right"></div>
+</div>
+    <script>
+        ScrollReveal({
+            reset:true,
+            distance:'30px',
+            duration:2000,
+            delay:100
+
+        });
+        
+        ScrollReveal().reveal('.left',{delay:600,origin:'left'});
+        ScrollReveal().reveal('.right',{delay:600,origin:'right'});
+        ScrollReveal().reveal('.loginpage',{delay:1000});
+        ScrollReveal().reveal('h1',{delay:800,origin:'top'});
+        ScrollReveal().reveal('hr',{delay:800,origin:'bottom'});
+       
+        ScrollReveal().reveal('.fa-brands',{interval:500});
+        
+       
+    </script>
+</body>
+</html>
